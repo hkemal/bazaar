@@ -1,13 +1,38 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #F0F2EF;
+  background: #6874D0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#email {
+  background: rgb(250, 250, 250);
+  height: 1.5rem;
+  width: 20rem;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
+}
+
+#password {
+  background: rgb(250, 250, 250);
+  height: 1.5rem;
+  width: 20rem;
+  margin: 0 5px 5px 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
+}
+
+#loginButton {
+  display: flex;
+}
+
+.LoginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

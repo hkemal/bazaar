@@ -1,37 +1,29 @@
-import React from 'react';
+import { Button, Menu, MenuItem } from '@material-ui/core';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       valueOfEmail: '',
-      valueOfPassword: '',
-      userInformation: []
+      valueOfPassword: ''
     };
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePassword = this.handleChangePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidMount() {
-      fetch('/*URL*/')
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ contacts: data })
-      })
-      .catch(console.log)
-  }
-
 
   handleChangeEmail(event) {
-    this.setState({ 
+    this.setState({
       valueOfEmail: event.target.value
-    });    
+    });
   }
 
   handleChangePassword(event) {
-    this.setState({ 
+    this.setState({
       valueOfPassword: event.target.value
-    });    
+    });
   }
 
   handleSubmit(event) {
@@ -43,43 +35,59 @@ class LoginPage extends React.Component {
     }
 
     PostData(sendMail).then(result => {
-      console.log(result);
+      localStorage.setItem('userData', JSON.stringify(result))
+      this.props.history.push('/user');
     });
 
   }
+
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="LoginPage">
-          <h1>BAZAAR</h1>
-          <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
-          <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
-          <button type="submit" value="Submit" id="loginButton">Login</button>
-        </div>
-      </form>
+      <>
+        <form onSubmit={this.handleSubmit}>
+          <div className="LoginPage">
+            <h1>BAZAAR</h1>
+            <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
+            <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
+            <button type="submit" value="Submit" id="loginButton">Login</button>
+            <Button color="primary" variant="contained">Giriş Yap</Button>
+          </div>
+        </form>
+        
+        <Menu
+          id="simple-menu"
+          keepMounted
+          open={true}
+        >
+          <MenuItem >Profile</MenuItem>
+          <MenuItem >My account</MenuItem>
+          <MenuItem >Logout</MenuItem>
+        </Menu>
+      </>
     );
   }
 }
-export default LoginPage;
+export default withRouter(LoginPage);
 
 
 export function PostData(userData) {
-  let BaseUrl = "https://localhost:8080/api/login";
+  let BaseUrl = "http://localhost:8080/api/login";
   return new Promise((resolve, reject) => {
-  fetch(BaseUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type":"application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify(userData)
-  })
-    .then(response => response.json())
-    .then(responseJson => {
-      resolve(responseJson);
+    fetch(BaseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(userData)
     })
-    .catch(error => {
-      reject(error);
-    });
-  })};
+      .then(response => response.json())
+      .then(responseJson => {
+        resolve(responseJson);
+      })
+      .catch(error => {
+        alert('Email or password wrong!');
+      });
+  })
+};

@@ -9,30 +9,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-#email {
-  background: rgb(250, 250, 250);
-  height: 1.5rem;
-  width: 20rem;
-  margin: 5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px grey;
-}
-
-#password {
-  background: rgb(250, 250, 250);
-  height: 1.5rem;
-  width: 20rem;
-  margin: 0 5px 5px 5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px grey;
-}
-
-#loginButton {
-  display: flex;
-}
-
-.LoginPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#root {
+  width: 100%;
+  height: 100%;
 }

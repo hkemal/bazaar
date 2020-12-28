@@ -1,6 +1,7 @@
 import { Button, Menu, MenuItem } from '@material-ui/core';
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import './LoginPage.css';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class LoginPage extends React.Component {
       <>
         <form onSubmit={this.handleSubmit}>
           <div className="LoginPage">
+            <i class="fas fa-address-card"></i>
             <h1>BAZAAR</h1>
             <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
             <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
@@ -54,7 +56,7 @@ class LoginPage extends React.Component {
             <Button color="primary" variant="contained">Giriş Yap</Button>
           </div>
         </form>
-        
+        {/*         
         <Menu
           id="simple-menu"
           keepMounted
@@ -63,7 +65,7 @@ class LoginPage extends React.Component {
           <MenuItem >Profile</MenuItem>
           <MenuItem >My account</MenuItem>
           <MenuItem >Logout</MenuItem>
-        </Menu>
+        </Menu> */}
       </>
     );
   }

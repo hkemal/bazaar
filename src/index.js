@@ -4,10 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
 
-//{ <script src="react-router-dom/umd/react-router-dom.min.js"></script>  }
-<script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>;
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />;
 
 ReactDOM.render(
   <React.StrictMode>

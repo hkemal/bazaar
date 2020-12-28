@@ -6,12 +6,12 @@ import UserPage from './UserPage';
 
 function App() {
   return (
-    <div className="App">      
+    <div className="App">
       <Router>
-    <Switch>
-      <Route exact path="/" component={LoginPage} />
-      <Route path="/user" component={UserPage} />
-    </Switch>
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+          <Route path="/user" component={UserPage} />
+        </Switch>
       </Router>
     </div>
   );

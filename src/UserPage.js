@@ -1,28 +1,42 @@
-import React, { Component } from 'react';
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './UserPage.css';
 
- const UserPage = () => {
 
-    const userInfo = JSON.parse(localStorage.getItem('userData'));
+const UserPage = () => {
 
-    const history = useHistory();
+  const userInfo = JSON.parse(localStorage.getItem('userData'));
 
-    const handleClick = () => {
-        history.push('/');
-      }
+  const history = useHistory();
 
-    return(
+  const handleClick = () => {
+    history.push('/');
+  }
+
+  return (
     <div className="UserPage">
-        <div>{userInfo.name}</div>
-        <div>{userInfo.surname}</div>
-        <div>{userInfo.phoneNumber}</div>
-        <div>{userInfo.address}</div>
-        <div>{userInfo.email}</div>
-        <button type="button" onClick={() => handleClick()}>
+      <Navbar />
+
+      <div id="body-product">
+
+    
+
+        <div id="products">
+          <div>{userInfo.name}</div>
+          <div>{userInfo.surname}</div>
+          <div>{userInfo.phoneNumber}</div>
+          <div>{userInfo.address}</div>
+          <div>{userInfo.email}</div>
+        </div>
+
+      </div>
+
+      {/*<button type="button" onClick={() => handleClick()}>
         Turn Back
-      </button>
+  </button> */}
     </div>
-    );
+  );
 }
 
 export default UserPage;

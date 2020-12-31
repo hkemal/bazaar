@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 import './UserPage.css';
@@ -7,10 +6,6 @@ import './UserPage.css';
 const UserPage = () => {
 
   const userInfo = JSON.parse(localStorage.getItem('userData'));
-  const history = useHistory();
-  const handleClick = () => {
-    history.push('/');
-  }
 
   return (
     <div className="UserPage">
@@ -27,10 +22,6 @@ const UserPage = () => {
           <div>{userInfo.email}</div>
         </div>
       </div>
-
-      <button type="button" onClick={() => handleClick()}>
-        Turn Back
-  </button>
     </div>
   );
 }

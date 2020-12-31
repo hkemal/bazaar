@@ -28,6 +28,7 @@ const Products = (props) => {
           onClick: () => console.log('Menu item 6 click.')
         }]} />
       </div>
+
       <div id="products-div">
         <h4 id="products-text">Products</h4>
         <div className="Products" >

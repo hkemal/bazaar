@@ -1,15 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Products from './components/Products';
 import './UserPage.css';
-
 
 const UserPage = () => {
 
   const userInfo = JSON.parse(localStorage.getItem('userData'));
-
   const history = useHistory();
-
   const handleClick = () => {
     history.push('/');
   }
@@ -17,10 +15,9 @@ const UserPage = () => {
   return (
     <div className="UserPage">
       <Navbar />
+      <Products />
 
-      <div id="body-product">
-
-    
+      <div id="body-product">    
 
         <div id="products">
           <div>{userInfo.name}</div>
@@ -29,12 +26,11 @@ const UserPage = () => {
           <div>{userInfo.address}</div>
           <div>{userInfo.email}</div>
         </div>
-
       </div>
 
-      {/*<button type="button" onClick={() => handleClick()}>
+      <button type="button" onClick={() => handleClick()}>
         Turn Back
-  </button> */}
+  </button>
     </div>
   );
 }

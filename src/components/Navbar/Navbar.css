@@ -1,0 +1,67 @@
+#navbar {
+  height: 50px;
+  background-color: #4C7DFC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+}
+
+#navbar-text {
+  margin-left: 10rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#menu-button {
+  margin-left: 1rem;
+  height: 2.9rem;
+}
+
+#user-button {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #4C7DFC;
+  border:none;
+}
+
+#user-button:hover {
+  background-color: rgba(73, 47, 47, 0.5);
+  cursor: pointer;
+}
+
+#basket-button {
+  background-color: #4C7DFC;
+  display: flex;
+  align-items: center;
+  color: white;
+  border:none;
+}
+
+#basket-button:hover {
+  background-color: rgba(73, 47, 47, 0.5);
+  cursor: pointer;
+}
+
+#navbar-right {
+  display: flex;
+  margin-right: 10rem;
+}
+
+#basket-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+#account-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

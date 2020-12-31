@@ -39,9 +39,7 @@ class LoginPage extends React.Component {
       localStorage.setItem('userData', JSON.stringify(result))
       this.props.history.push('/user');
     });
-
   }
-
 
   render() {
     return (

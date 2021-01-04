@@ -12,7 +12,6 @@ class LoginPage extends React.Component {
     };
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePassword = this.handleChangePassword.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChangeEmail(event) {
@@ -27,7 +26,7 @@ class LoginPage extends React.Component {
     });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     let sendMail = {
@@ -35,7 +34,7 @@ class LoginPage extends React.Component {
       "password": this.state.valueOfPassword
     }
 
-    PostData(sendMail).then(result => {
+    postData(sendMail).then(result => {
       localStorage.setItem('userData', JSON.stringify(result))
       this.props.history.push('/user');
     });
@@ -51,7 +50,7 @@ class LoginPage extends React.Component {
             <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
             <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
             <button type="submit" value="Submit" id="loginButton">Login</button>
-            <Button color="primary" variant="contained">Giriş Yap</Button>
+            {/* <Button color="primary" variant="contained">Giriş Yap</Button> */}
           </div>
         </form>
         {/*         
@@ -71,10 +70,10 @@ class LoginPage extends React.Component {
 export default withRouter(LoginPage);
 
 
-export function PostData(userData) {
-  let BaseUrl = "http://localhost:8080/api/login";
+function postData(userData) {
+  let baseUrl = "http://localhost:8080/api/login";
   return new Promise((resolve, reject) => {
-    fetch(BaseUrl, {
+    fetch(baseUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

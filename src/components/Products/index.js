@@ -32,30 +32,15 @@ const Products = (props) => {
       <div id="products-div">
         <h4 id="products-text">Products</h4>
         <div className="Products" >
-          <div className="product" id="product1">
-            <EachProduct />
-          </div>
-          <div className="product" id="product2" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product3" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product4" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product5" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product6" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product7" >
-          <EachProduct />
-          </div>
-          <div className="product" id="product8" >
-          <EachProduct />
-          </div>
+          {props.items.map(item => (
+            <div className="product" key={`product-${item.id}`}>
+              <EachProduct
+                pictureUrl={item.pictureUrl}
+                name={item.productName}
+                price={item.price}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

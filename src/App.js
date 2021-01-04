@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import LoginPage from './LoginPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import UserPage from './UserPage';
+import ProductsPage from './pages/ProductsPage/ProductsPage';
+import AccountPage from './pages/AccountPage/AccountPage';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={LoginPage} />
-          <Route path="/user" component={UserPage} />
+          <Route path="/products" component={ProductsPage} />
+          <Route path="/account" component={AccountPage} />
         </Switch>
       </Router>
     </div>

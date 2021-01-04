@@ -16,29 +16,6 @@ export default function Navbar() {
 
   return (
     <div id="navbar" >
-      {/* <button id="menu-button">
-        <AiOutlineMenu id="icon-menu" size="2rem" />
-      </button>
-      <Menu opened={true} items={[{
-        label: 'Menu Item 1',
-        onClick: () => console.log('Menu item 1 click.')
-      }, {
-        label: 'Menu Item 2',
-        onClick: () => console.log('Menu item 2 click.')
-      }, {
-        label: 'Menu Item 3',
-        onClick: () => console.log('Menu item 3 click.')
-      }, {
-        label: 'Menu Item 4',
-        onClick: () => console.log('Menu item 4 click.')
-      }, {
-        label: 'Menu Item 5',
-        onClick: () => console.log('Menu item 5 click.')
-      }, {
-        label: 'Menu Item 6',
-        onClick: () => console.log('Menu item 6 click.')
-      }]} /> */}
-
       <div id="navbar-text">
         BAZAAR
       </div>
@@ -59,7 +36,7 @@ export default function Navbar() {
 
       <Menu opened={toggleMyAccountPopup} style={{ right: 0, marginRight: '11rem' }} items={[{
         label: 'Account',
-        onClick: () => console.log('Menu item 1 click.')
+        onClick: () => history.push('/account')
       }, {
         label: 'Logout',
         onClick: () => history.push('/')

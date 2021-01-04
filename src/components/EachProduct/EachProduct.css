@@ -7,12 +7,12 @@
 }
 
 #add-cart {
-background-color: #2D57EC;
-border-radius: 4px;
-color: white;
+  background-color: #2D57EC;
+  border-radius: 4px;
+  color: white;
 }
 
-#add-cart:hover{
+#add-cart:hover {
   border: 2px solid black;
   cursor: pointer;
 }

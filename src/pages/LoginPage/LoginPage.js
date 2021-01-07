@@ -36,7 +36,7 @@ class LoginPage extends React.Component {
 
     postData(sendMail).then(result => {
       localStorage.setItem('userData', JSON.stringify(result))
-      this.props.history.push('/user');
+      this.props.history.push('/products');
     });
   }
 

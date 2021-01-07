@@ -3,13 +3,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 65px;
   min-height: 100px;
+  padding-right: 30px;
 }
 
 .product {
-  width: 10rem;
-  height: 16rem;
+  width: 12rem;
+  height: 18rem;
   background: #EEEEEE;
   box-sizing: border-box;
   border-radius: 4px;
@@ -29,7 +30,7 @@
 }
 
 #categories-div {
-  background-color: rgba(128, 128, 128, 0.5);
+ 
 }
 
 #categories-text {

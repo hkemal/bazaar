@@ -1,0 +1,11 @@
+#productCategory {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-link {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 6rem 1rem 2rem;
+  text-transform: capitalize;
+}

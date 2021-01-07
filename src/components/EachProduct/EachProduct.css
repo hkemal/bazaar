@@ -16,3 +16,22 @@
   border: 2px solid black;
   cursor: pointer;
 }
+
+#image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease;
+  user-select: none;
+}
+
+#image:hover {
+  transform: scale(1.5);
+  cursor: crosshair;
+}

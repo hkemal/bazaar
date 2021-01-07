@@ -1,5 +1,4 @@
-import { Button, Menu, MenuItem } from '@material-ui/core';
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './LoginPage.css';
 
@@ -50,19 +49,8 @@ class LoginPage extends React.Component {
             <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
             <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
             <button type="submit" value="Submit" id="loginButton">Login</button>
-            {/* <Button color="primary" variant="contained">Giriş Yap</Button> */}
           </div>
         </form>
-        {/*         
-        <Menu
-          id="simple-menu"
-          keepMounted
-          open={true}
-        >
-          <MenuItem >Profile</MenuItem>
-          <MenuItem >My account</MenuItem>
-          <MenuItem >Logout</MenuItem>
-        </Menu> */}
       </>
     );
   }

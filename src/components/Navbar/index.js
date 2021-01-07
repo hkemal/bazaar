@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AccountIcon from '../icons/AccountIcon';
 import ShoppingCartIcon from '../icons/ShoppingCartIcon';
 import { useHistory } from 'react-router-dom';
-import Menu from '../Menu';
+import Menu from '../Menu/Menu';
 import './Navbar.css';
 
 export default function Navbar() {

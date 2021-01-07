@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CategoryList from '../../containers/CategoryList';
-import EachProduct from '../EachProduct';
-import Menu from '../Menu';
+import EachProduct from '../EachProduct/EachProduct';
 import './Products.css';
 
 const Products = (props) => {

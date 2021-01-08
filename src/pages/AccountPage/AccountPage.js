@@ -1,19 +1,20 @@
 import React from 'react'
 import Navbar from '../../components/Navbar';
-import './AccountPage.css'
+import AccountInfo from '../../containers/AccountInfo';
+import CategoryList from '../../containers/CategoryList';
+import './AccountPage.css';
 
-const AccountPage = () => {
-  const userInfo = JSON.parse(localStorage.getItem('userData'));
+const AccountPage = (props) => {
   return (
     <div>
       <Navbar />
-      <div id="customer">
-          <div>{userInfo.name}</div>
-          <div>{userInfo.surname}</div>
-          <div>{userInfo.phoneNumber}</div>
-          <div>{userInfo.address}</div>
-          <div>{userInfo.email}</div>
+      <div id="info-container" style={{ width: "66.67%", height: '100%', margin: "0 auto" }}>
+        <div id="categories-div">
+          <h4 id="categories-text">Categories</h4>
+          <CategoryList />
         </div>
+        <AccountInfo />
+      </div>
     </div>
   )
 }

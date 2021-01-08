@@ -1,3 +1,5 @@
-#customer{
-  background-color: turquoise;
+#info-container {
+  background-color: #eee;  
+  text-align:start;
+  display: flex;
 }

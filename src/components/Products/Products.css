@@ -11,7 +11,6 @@
 .product {
   width: 12rem;
   height: 18rem;
-  background: #EEEEEE;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -27,10 +26,6 @@
 
 #products-text {
   padding: 0 auto 2.5rem auto;
-}
-
-#categories-div {
- 
 }
 
 #categories-text {

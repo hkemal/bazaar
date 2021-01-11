@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import CategoryList from '../../containers/CategoryList';
 import EachProduct from '../EachProduct/EachProduct';
+import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import './Products.css';
 
-const Products = ({ items, onAddToCart }) => {
+const Products = ({ items, onAddToCart, cart }) => {
   return (
     <div id="container">
       <div id="categories-div">
@@ -23,6 +24,7 @@ const Products = ({ items, onAddToCart }) => {
             </div>
           ))}
         </div>
+        <ShoppingCart cart={cart} />
       </div>
     </div>
 

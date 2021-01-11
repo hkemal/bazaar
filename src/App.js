@@ -12,18 +12,16 @@ function App() {
     setCart([...cart, item]);
   };
 
-  console.log('cart', cart)
- 
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route exact path="/" component={LoginPage} />
           <Route exact path="/products">
-            <ProductsPage onAddToCart={handleAddToCart} />
+            <ProductsPage onAddToCart={handleAddToCart} cart={cart} />
           </Route>
           <Route path="/products/:category">
-            <ProductsPage onAddToCart={handleAddToCart} />
+            <ProductsPage onAddToCart={handleAddToCart} cart={cart} />
           </Route>
           <Route path="/account" component={AccountPage} />
         </Switch>

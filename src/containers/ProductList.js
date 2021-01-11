@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Products from '../components/Products/Products';
 
-const ProductList = ({ onAddToCart }) => {
+const ProductList = ({ onAddToCart, cart }) => {
   const [products, setProducts] = useState([]);
   const { category } = useParams();
 
@@ -18,7 +18,7 @@ const ProductList = ({ onAddToCart }) => {
   }, [category]);
   return (
     <div>
-      <Products items={products} onAddToCart={onAddToCart} />
+      <Products items={products} onAddToCart={onAddToCart} cart={cart} />
     </div>
   );
 }

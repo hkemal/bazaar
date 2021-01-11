@@ -3,11 +3,11 @@ import Navbar from '../../components/Navbar';
 import ProductList from '../../containers/ProductList';
 import './ProductsPage.css';
 
-function ProductsPage({ onAddToCart }) {
+function ProductsPage({ onAddToCart, cart }) {
   return (
     <div className="ProductsPage">
       <Navbar />
-      <ProductList onAddToCart={onAddToCart} />
+      <ProductList onAddToCart={onAddToCart} cart={cart} />
     </div>
   );
 }

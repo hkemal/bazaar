@@ -3,7 +3,7 @@ import CategoryList from '../../containers/CategoryList';
 import EachProduct from '../EachProduct/EachProduct';
 import './Products.css';
 
-const Products = (props, { onAddToCart }) => {
+const Products = ({ items, onAddToCart }) => {
   return (
     <div id="container">
       <div id="categories-div">
@@ -14,13 +14,11 @@ const Products = (props, { onAddToCart }) => {
       <div id="products-div">
         <h4 id="products-text">Products</h4>
         <div className="Products" >
-          {props.items.map(item => (
+          {items.map(item => (
             <div className="product" key={`product-${item.id}`}>
               <EachProduct
                 onAddToCart={onAddToCart}
-                pictureUrl={item.pictureUrl}
-                name={item.productName}
-                price={item.price}
+                item={item}
               />
             </div>
           ))}

@@ -18,7 +18,7 @@ const ProductList = ({ onAddToCart }) => {
   }, [category]);
   return (
     <div>
-      <Products items={products} onAddToCart={onAddToCart}/>
+      <Products items={products} onAddToCart={onAddToCart} />
     </div>
   );
 }

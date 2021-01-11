@@ -11,6 +11,8 @@ function App() {
   const handleAddToCart = (item) => {
     setCart([...cart, item]);
   };
+
+  console.log('cart', cart)
  
   return (
     <div className="App">

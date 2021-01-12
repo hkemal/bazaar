@@ -1,6 +1,17 @@
 #shopping-cart{
-  height: 240px;
   width: 100%;
-  background-color: darkturquoise;
-  position: relative;
+  background-color: #eee;
+  color: #666;
+  padding: 5px 15px;
+  
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-item span {
+  margin-right: 5px;
 }

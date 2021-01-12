@@ -10,16 +10,24 @@ export default function ShoppingCart({ cart }) {
 
   let newCart = filteredArr(cart);
 
+  let total = 0;
+
+  newCart.map(item => (
+    total += Number(((item.price) * countOfProduct(cartIndex, item.id)).toFixed(1))
+  ))
+
   return (
-    <div>
-      <div id="shopping-cart">
-        <div>
-          {newCart.map(item => (
-            <div key={`product-${item.id})`}>
-              {countOfProduct(cartIndex, item.id)} {item.productName} {(item.price)*countOfProduct(cartIndex, item.id)} <img width="100px" src={item.pictureUrl} alt="#" /></div>
-          ))}
+    <div id="shopping-cart">
+      {newCart.map(item => (
+        <div key={`product-${item.id})`} className="cart-item">
+          <span>{countOfProduct(cartIndex, item.id)}</span>
+          <span>{item.productName}</span>
+          <span>₺{Number(((item.price) * countOfProduct(cartIndex, item.id)).toFixed(1))}</span>
+          <img width="70" src={item.pictureUrl} alt="#" />
         </div>
-      </div>
+      ))}
+      <hr />
+      <span>Total : ₺ {total}</span>
     </div>
   )
 }

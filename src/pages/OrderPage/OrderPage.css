@@ -1,0 +1,9 @@
+table {
+  width: 800px;
+  text-align: center;
+}
+
+#order {
+  padding: 0 1rem 1rem;
+  height: calc(100vh - 70px);
+}

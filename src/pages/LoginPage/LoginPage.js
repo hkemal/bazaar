@@ -29,8 +29,8 @@ class LoginPage extends React.Component {
     event.preventDefault();
 
     let sendMail = {
-      "email": this.state.valueOfEmail,
-      "password": this.state.valueOfPassword
+      'email': this.state.valueOfEmail,
+      'password': this.state.valueOfPassword
     }
 
     postData(sendMail).then(result => {
@@ -59,22 +59,16 @@ export default withRouter(LoginPage);
 
 
 function postData(userData) {
-  let baseUrl = "http://localhost:8080/api/login";
-  return new Promise((resolve, reject) => {
-    fetch(baseUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(userData)
-    })
-      .then(response => response.json())
-      .then(responseJson => {
-        resolve(responseJson);
-      })
-      .catch(error => {
-        alert('Email or password wrong!');
-      });
+  let baseUrl = '/api/login';
+  return fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
   })
+    .then(response => response.json())
+    .catch(error => {
+      alert('Email or password wrong!');
+    });
 };

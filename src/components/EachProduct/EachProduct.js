@@ -2,8 +2,6 @@ import React from 'react'
 import './EachProduct.css'
 
 const EachProduct = ({ item, onAddToCart }) => {
-  console.log(item);
-
   return (
     <div id="product" style={{ background: "white", borderRadius: '4px', border: "0.5px black solid" }}>
       <div id="image-div">

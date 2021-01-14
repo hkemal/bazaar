@@ -4,10 +4,10 @@ import AccountInfo from '../../containers/AccountInfo';
 import CategoryList from '../../containers/CategoryList';
 import './AccountPage.css';
 
-const AccountPage = (props) => {
+const AccountPage = ({ cart }) => {
   return (
     <div>
-      <Navbar cart={props.cart} />
+      <Navbar cart={cart} />
       <div id="info-container" style={{ width: "66.67%", height: '100%', margin: "0 auto" }}>
         <div id="categories-div">
           <h4 id="categories-text">Categories</h4>

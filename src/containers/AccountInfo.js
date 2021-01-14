@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
 const AccountInfo = () => {
   const userInfo = JSON.parse(localStorage.getItem('userData'));
   let id = userInfo.id;
@@ -13,7 +12,7 @@ const AccountInfo = () => {
 
   if (!info) return 'Loading';
   return (
-    <div style={{ height:"100%", backgroundColor:"#eee"}}>
+    <div style={{ height: "100%", backgroundColor: "#eee" }}>
       <div id="customer" >
         <p style={{ fontSize: "18px", fontWeight: 'bold', textAlign: "center" }}>Account Information</p>
         <div>Name : {info.name} {info.surname}</div>

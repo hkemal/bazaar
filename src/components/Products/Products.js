@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CategoryList from '../../containers/CategoryList';
 import EachProduct from '../EachProduct/EachProduct';
-import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import './Products.css';
 
 const Products = ({ items, onAddToCart, cart }) => {
@@ -24,10 +23,8 @@ const Products = ({ items, onAddToCart, cart }) => {
             </div>
           ))}
         </div>
-        <ShoppingCart cart={cart} />
       </div>
     </div>
-
   )
 }
 export default Products;

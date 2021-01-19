@@ -6,4 +6,10 @@
 .MenuItem {
   display: block;
   width: 8rem;
+  padding: 5px;
+}
+
+.MenuItem:hover{
+  cursor: pointer;
+  border: 2px solid black;
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar';
-import AccountInfo from '../../containers/AccountInfo';
 import CategoryList from '../../containers/CategoryList';
+import OrderInfoByCustomer from '../../containers/OrderInfoByCustomer';
+import './OrderInformationPage.css'
 
-const AccountPage = ({ cart }) => {
+export default function OrderInformationPage({ cart }) {
   return (
     <div>
       <Navbar cart={cart} />
@@ -12,10 +13,9 @@ const AccountPage = ({ cart }) => {
           <h4 id="categories-text">Categories</h4>
           <CategoryList />
         </div>
-        <AccountInfo />
+        <OrderInfoByCustomer />
       </div>
     </div>
   )
 }
 
-export default AccountPage;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const AccountInfo = () => {
+
   const userInfo = JSON.parse(localStorage.getItem('userData'));
   let id = userInfo.id;
   const [info, setInfo] = useState(null);

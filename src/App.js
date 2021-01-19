@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import OrderPage from './pages/OrderPage/OrderPage';
+import OrderInformationPage from './pages/OrderInformationPage/OrderInformationPage';
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -39,8 +41,12 @@ function App() {
             <AccountPage cart={cart} />
           </Route>
 
-          <Route path="/order">
+          <Route exact path="/order">
             <OrderPage cart={cart} />
+          </Route>
+
+          <Route path="/order-information">
+            <OrderInformationPage cart={cart} />
           </Route>
 
         </Switch>

@@ -5,7 +5,6 @@ export default function PostingOrder({ cart }) {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    console.log('json parse')
     const user = localStorage.getItem('userData')
     if (user) setUser(JSON.parse(user));
   }, []);

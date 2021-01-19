@@ -1,0 +1,18 @@
+#details-button {
+  width: 3.5rem;
+  height: 1.5rem;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#details-button:hover {
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#table{
+  margin: 10px auto;
+}

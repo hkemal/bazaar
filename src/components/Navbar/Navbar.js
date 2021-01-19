@@ -41,9 +41,12 @@ export default function Navbar(props) {
             <AccountIcon />
             MY ACCOUNT
           </button>
-          <Menu opened={isAccountMenuOpened} style={{ left: 0, top: 38 }} items={[{
+          <Menu opened={isAccountMenuOpened} style={{padding:3, left: 0, top: 38 }} items={[{
             label: 'Account',
             onClick: () => history.push('/account')
+          },{
+            label: 'Order Information',
+            onClick: () => history.push('/order-information')
           }, {
             label: 'Logout',
             onClick: () => history.push('/')

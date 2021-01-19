@@ -4,6 +4,7 @@ import CategoryLinkIcon from '../icons/CategoryLinkIcon';
 import './Categories.css';
 
 export const Categories = (props) => {
+  console.log(props)
   return (
     <div>
       <Link to={`/products`} style={{ textDecoration: "none" }}>

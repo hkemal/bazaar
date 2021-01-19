@@ -1,0 +1,5 @@
+#info-container {
+  background-color: #eee;  
+  text-align:start;
+  display: flex;
+}

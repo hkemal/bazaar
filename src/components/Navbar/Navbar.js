@@ -47,6 +47,9 @@ export default function Navbar(props) {
           },{
             label: 'Order Information',
             onClick: () => history.push('/order-information')
+          },{
+            label: 'Add Product',
+            onClick: () => history.push('/new-product')
           }, {
             label: 'Logout',
             onClick: () => history.push('/')

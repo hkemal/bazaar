@@ -2,22 +2,22 @@ import React from 'react'
 import './EachOrder.css';
 
 function EachOrderPopup(props) {
-  console.log(props.selecting);
+  //console.log(props.selecting);
   return (
     <div className='popup'>
       <div className='popup_inner'>
         <table id="table">
           <thead>
             <tr>
-              <th colspan="5">Order Id : {props.selecting[0].orderId}</th>
+              <th colSpan="5">Order Id : {props.selecting[0].orderId}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Amount</td>
-              <td>Category</td>
               <td>Product Name</td>
+              <td>Category</td>
               <td>Price</td>
+              <td>Amount</td>
               <td>Total Price</td>
             </tr>
           </tbody>

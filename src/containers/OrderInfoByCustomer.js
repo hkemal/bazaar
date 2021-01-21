@@ -15,7 +15,7 @@ export default function OrderInfoByCustomer() {
     const informationJson = await information.json();
     setInfo(informationJson);
   }, []);
-  if (!info) return 'Loading';
+  if (!info) return <h3>Order not found</h3>;
 
   //click button
   let handleClick = async (orderId) => {
@@ -35,7 +35,7 @@ export default function OrderInfoByCustomer() {
       <table style={{ marginTop: "1.5rem" }}>
         <thead>
           <tr>
-            <th colspan="3">All Orders</th>
+            <th colSpan="3">All Orders</th>
           </tr>
           <br />
           <tr>

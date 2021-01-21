@@ -6,6 +6,7 @@ import ProductsPage from './pages/ProductsPage/ProductsPage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import OrderPage from './pages/OrderPage/OrderPage';
 import OrderInformationPage from './pages/OrderInformationPage/OrderInformationPage';
+import ProductAddingPage from './pages/ProductAddingPage/ProductAddingPage';
 
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
 
           <Route path="/order-information">
             <OrderInformationPage cart={cart} />
+          </Route>
+
+          <Route path="/new-product">
+            <ProductAddingPage cart={cart} />
           </Route>
 
         </Switch>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './LoginPage.css';
+import { FiLogIn } from 'react-icons/fi';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class LoginPage extends React.Component {
             <h1>BAZAAR</h1>
             <input type="text" id="email" name="email" value={this.state.value} onChange={this.handleChangeEmail} placeholder="example@example.com" />
             <input type="text" id="password" name="password" value={this.state.value} onChange={this.handleChangePassword} placeholder="password" />
-            <button type="submit" value="Submit" id="loginButton">Login</button>
+            <button type="submit" value="Submit" id="loginButton">LOG IN <FiLogIn size={20} /></button>
           </div>
         </form>
       </>

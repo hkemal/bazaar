@@ -29,6 +29,7 @@ html, body, .app {
   right: 25%;
   top: 25%;
   bottom: 25%;
+  border-radius: 4px;
   margin: auto;
   background:rgba(200, 200, 200, 0.9);
 }

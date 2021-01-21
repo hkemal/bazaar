@@ -4,7 +4,7 @@ import './EachOrder.css';
 import EachOrderPopup from './EachOrderPopUp';
 
 const EachOrder = (props) => {
-  console.log(props.selecting);
+  //console.log(props.selecting);
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => {
     setShowPopup(!showPopup);
